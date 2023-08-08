@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// Handling all routes
-router.use("/api", require("./api"));
+// Handling api routes
+router.use("/v1", require("./v1"));
 
 module.exports = router;

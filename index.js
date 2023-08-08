@@ -3,6 +3,13 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT;
 const db = require("./config/mongoose");
+const cors = require("cors");
+
+app.use(cors());
+
+///------------- Body Parser for req.body ----------------///
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 ///--------- USING ROUTES --------------///
 app.use("/", require("./routes"));
