@@ -11,7 +11,7 @@ const reportSchema = new mongoose.Schema({
     required: true,
     ref: "Patient",
   },
-  report: {
+  status: {
     type: "String",
     enum: [
       "Negative",
